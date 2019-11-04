@@ -14,6 +14,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             allowNull: true
         },
+        mangaTitle: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
         paragraph: {
             type: DataTypes.STRING,
             allowNull: false

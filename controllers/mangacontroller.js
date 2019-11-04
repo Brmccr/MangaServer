@@ -24,6 +24,218 @@ router.get('/allmangas', (req, res) => {
     }))
 })
 
+router.get('/reviewberserk', (req, res) => {
+    db.mangas.findAll({
+        where: {title : "Berserk"},
+      include: [
+        {
+          model: db.reviews,
+        }
+      ]
+    }).then(manga => res.status(200).json(manga))
+    .catch(err => res.status(500).json({
+        error: err
+    }))
+})
+
+router.post('/reviewberserk', validateSession, function(req, res){
+    const reviewFromRequest = {
+        rating: req.body.rating,
+        paragraph: req.body.paragraph,
+        owner: req.user.id,
+        mangaTitle: "Berserk",
+        mangaId: "bde6a513-e9e3-41d8-87b3-b67f6f3495d2"
+    }
+
+    console.log(reviewFromRequest)
+
+    db.reviews.create(reviewFromRequest)
+        .then(review => res.status(200).json(review))
+        .catch(err => res.json(req.errors));
+})
+
+router.post('/reviewNGE', validateSession, function(req, res){
+    const reviewFromRequest = {
+        rating: req.body.rating,
+        paragraph: req.body.paragraph,
+        owner: req.user.id,
+        mangaTitle: "Neon Genesis Evangelion",
+        mangaId: "14ecaf80-2a1d-48b8-8d74-5df38f0e3603"
+    }
+
+    console.log(reviewFromRequest)
+
+    db.reviews.create(reviewFromRequest)
+        .then(review => res.status(200).json(review))
+        .catch(err => res.json(req.errors));
+})
+
+    router.get('/reviewNGE', (req, res) => {
+        db.mangas.findAll({
+            where: {title : "Neon Genesis Evangelion"},
+          include: [
+            {
+              model: db.reviews,
+            }
+          ]
+        }).then(manga => res.status(200).json(manga))
+        .catch(err => res.status(500).json({
+            error: err
+        }))
+    })
+
+    router.post('/reviewdeathnote', validateSession, function(req, res){
+        const reviewFromRequest = {
+            rating: req.body.rating,
+            paragraph: req.body.paragraph,
+            owner: req.user.id,
+            mangaTitle: "Death Note",
+            mangaId: "892cc5c1-b4c8-4dfd-9aa0-0cf3684e1c01"
+        }
+    
+        console.log(reviewFromRequest)
+    
+        db.reviews.create(reviewFromRequest)
+            .then(review => res.status(200).json(review))
+            .catch(err => res.json(req.errors));
+    })
+
+    router.get('/reviewdeathnote', (req, res) => {
+        db.mangas.findAll({
+            where: {title : "Death Note"},
+          include: [
+            {
+              model: db.reviews,
+            }
+          ]
+        }).then(manga => res.status(200).json(manga))
+        .catch(err => res.status(500).json({
+            error: err
+        }))
+    })
+
+    router.post('/reviewmadeinabyss', validateSession, function(req, res){
+        const reviewFromRequest = {
+            rating: req.body.rating,
+            paragraph: req.body.paragraph,
+            owner: req.user.id,
+            mangaTitle: "Made In Abyss",
+            mangaId: "c9d73f7b-e90a-48e9-ae5d-b3d62171904f"
+        }
+    
+        console.log(reviewFromRequest)
+    
+        db.reviews.create(reviewFromRequest)
+            .then(review => res.status(200).json(review))
+            .catch(err => res.json(req.errors));
+    })
+
+    router.get('/reviewmadeinabyss', (req, res) => {
+        db.mangas.findAll({
+            where: {title : "Made In Abyss"},
+          include: [
+            {
+              model: db.reviews,
+            }
+          ]
+        }).then(manga => res.status(200).json(manga))
+        .catch(err => res.status(500).json({
+            error: err
+        }))
+    })
+
+    router.post('/reviewsouleater', validateSession, function(req, res){
+        const reviewFromRequest = {
+            rating: req.body.rating,
+            paragraph: req.body.paragraph,
+            owner: req.user.id,
+            mangaTitle: "Soul Eater",
+            mangaId: "97ecf3c6-45dd-4219-962f-b52e50f07741"
+        }
+    
+        console.log(reviewFromRequest)
+    
+        db.reviews.create(reviewFromRequest)
+            .then(review => res.status(200).json(review))
+            .catch(err => res.json(req.errors));
+    })
+
+    router.get('/reviewsouleater', (req, res) => {
+        db.mangas.findAll({
+            where: {title : "Soul Eater"},
+          include: [
+            {
+              model: db.reviews,
+            }
+          ]
+        }).then(manga => res.status(200).json(manga))
+        .catch(err => res.status(500).json({
+            error: err
+        }))
+    })
+
+    router.post('/reviewdeadmanwonderland', validateSession, function(req, res){
+        const reviewFromRequest = {
+            rating: req.body.rating,
+            paragraph: req.body.paragraph,
+            owner: req.user.id,
+            mangaTitle: "Deadman Wonderland",
+            mangaId: "ecafd012-4072-4d1d-94c8-78c5f97c2a2d"
+        }
+    
+        console.log(reviewFromRequest)
+    
+        db.reviews.create(reviewFromRequest)
+            .then(review => res.status(200).json(review))
+            .catch(err => res.json(req.errors));
+    })
+
+
+    router.get('/reviewdeadmanwonderland', (req, res) => {
+        db.mangas.findAll({
+            where: {title : "Deadman Wonderland"},
+          include: [
+            {
+              model: db.reviews,
+            }
+          ]
+        }).then(manga => res.status(200).json(manga))
+        .catch(err => res.status(500).json({
+            error: err
+        }))
+    })
+
+    
+
+
+//should I just do a get from Manga ID? And then build other another get from there for reviews-? 
+
+// could get the manga title - which would pull the id along with it- Could just have that return to the review
+// drop down section - Then it would be holding that ID? So- A simple get for the manga itself- 
+
+//how can I pull a single manga associated with that ID? 
+
+//is there maybe a way I could grab it through the title? 
+
+//will need to map over both manga and reviews - will map over reviews and return  it to a table. 
+
+// router.get('/mangareviews', (req, res) => {
+//     let MangaId = req.db.mangas.id;
+
+
+//     db.mangas.findOne({
+//         where: {id : MangaId}
+//       include: [
+//         {
+//           model: db.reviews,
+//         }
+//       ]
+//     }).then(manga => res.status(200).json(manga))
+//     .catch(err => res.status(500).json({
+//         error: err
+//     }))
+// })
+
 //get all reviews by mangaID
 router.get('/allreviewmanga', validateSession, function(req, res) {
     let user = req.user.id;
@@ -85,6 +297,7 @@ router.get('/', function(req, res) {
     res.send('Hey!! This is a test route!');
 })
 
+// add validatation to user creation here -- 
 router.post('/user/', function(req, res) {
 
     let username = req.body.user.username;
