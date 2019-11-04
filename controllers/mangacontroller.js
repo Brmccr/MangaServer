@@ -44,7 +44,7 @@ router.post('/reviewberserk', validateSession, function(req, res){
         paragraph: req.body.paragraph,
         owner: req.user.id,
         mangaTitle: "Berserk",
-        mangaId: "bde6a513-e9e3-41d8-87b3-b67f6f3495d2"
+        mangaId: "63868b66-e558-4b65-9221-91932e3da898"
     }
 
     console.log(reviewFromRequest)
