@@ -26,12 +26,12 @@ router.get('/allmangas', (req, res) => {
 
 router.get('/reviewberserk', (req, res) => {
     db.mangas.findAll({
-        where: {title : "Berserk"},
-      include: [
-        {
-          model: db.reviews,
-        }
-      ]
+        where: {title : "Berserk"}
+    //   include: [
+    //     {
+    //       model: db.reviews,
+    //     }
+    //   ]
     }).then(manga => res.status(200).json(manga))
     .catch(err => res.status(500).json({
         error: err
@@ -376,9 +376,6 @@ router.post('/review', validateSession, function(req, res){
 router.post('/mangacreate', validateSession, function(req, res) {
     const mangaItem = {
         title: req.body.title,
-        description: req.body.description,
-        imagemain: req.body.imagemain,
-        imagemult: req.body.imagemult
     }
         console.log(mangaItem)
 
