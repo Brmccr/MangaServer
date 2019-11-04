@@ -50,7 +50,7 @@ router.post('/reviewberserk', validateSession, function(req, res){
     console.log(reviewFromRequest)
 
     db.reviews.create(reviewFromRequest)
-        .then(review => res.status(200).json(review))
+        .then(review => res.status(205).json(review))
         .catch(err => res.json(req.errors));
 })
 
