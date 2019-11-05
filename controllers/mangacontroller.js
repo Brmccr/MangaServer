@@ -40,11 +40,12 @@ router.get('/reviewberserk', (req, res) => {
 
 router.post('/reviewberserk', validateSession, function(req, res){
     const reviewFromRequest = {
+        reviewer: req.body.reviewer,
         rating: req.body.rating,
         paragraph: req.body.paragraph,
         owner: req.user.id,
         mangaTitle: "Berserk",
-        mangaId: "bde6a513-e9e3-41d8-87b3-b67f6f3495d2"
+        mangaId: "82f92301-d6cd-4ce7-9140-2a4e122a3044"
     }
 
     console.log(reviewFromRequest)
@@ -56,11 +57,12 @@ router.post('/reviewberserk', validateSession, function(req, res){
 
 router.post('/reviewNGE', validateSession, function(req, res){
     const reviewFromRequest = {
+        reviewer: req.body.reviewer,
         rating: req.body.rating,
         paragraph: req.body.paragraph,
         owner: req.user.id,
         mangaTitle: "Neon Genesis Evangelion",
-        mangaId: "14ecaf80-2a1d-48b8-8d74-5df38f0e3603"
+        mangaId: "3a559974-7e96-4667-843f-2fadf7b1b282"
     }
 
     console.log(reviewFromRequest)
@@ -86,11 +88,12 @@ router.post('/reviewNGE', validateSession, function(req, res){
 
     router.post('/reviewdeathnote', validateSession, function(req, res){
         const reviewFromRequest = {
+            reviewer: req.body.reviewer,
             rating: req.body.rating,
             paragraph: req.body.paragraph,
             owner: req.user.id,
             mangaTitle: "Death Note",
-            mangaId: "892cc5c1-b4c8-4dfd-9aa0-0cf3684e1c01"
+            mangaId: "a81c4c04-ec58-4104-a010-322a5da55331"
         }
     
         console.log(reviewFromRequest)
@@ -116,11 +119,12 @@ router.post('/reviewNGE', validateSession, function(req, res){
 
     router.post('/reviewmadeinabyss', validateSession, function(req, res){
         const reviewFromRequest = {
+            reviewer: req.body.reviewer,
             rating: req.body.rating,
             paragraph: req.body.paragraph,
             owner: req.user.id,
             mangaTitle: "Made In Abyss",
-            mangaId: "c9d73f7b-e90a-48e9-ae5d-b3d62171904f"
+            mangaId: "932a3d74-5c02-4f6a-a5ee-6943cebc3d8a"
         }
     
         console.log(reviewFromRequest)
@@ -146,11 +150,12 @@ router.post('/reviewNGE', validateSession, function(req, res){
 
     router.post('/reviewsouleater', validateSession, function(req, res){
         const reviewFromRequest = {
+            reviewer: req.body.reviewer,
             rating: req.body.rating,
             paragraph: req.body.paragraph,
             owner: req.user.id,
             mangaTitle: "Soul Eater",
-            mangaId: "97ecf3c6-45dd-4219-962f-b52e50f07741"
+            mangaId: "bcb74e64-c27f-46b2-a988-699999219c91"
         }
     
         console.log(reviewFromRequest)
@@ -176,11 +181,12 @@ router.post('/reviewNGE', validateSession, function(req, res){
 
     router.post('/reviewdeadmanwonderland', validateSession, function(req, res){
         const reviewFromRequest = {
+            reviewer: req.body.reviewer,
             rating: req.body.rating,
             paragraph: req.body.paragraph,
             owner: req.user.id,
             mangaTitle: "Deadman Wonderland",
-            mangaId: "ecafd012-4072-4d1d-94c8-78c5f97c2a2d"
+            mangaId: "0a6b3d63-1448-45ba-ba56-c3f63f9fc677"
         }
     
         console.log(reviewFromRequest)
