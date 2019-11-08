@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
             defaultValue: DataTypes.UUIDV4,
             allowNull: false
         },
-        mangaId: {
+        mangaid: {
             type: DataTypes.UUID,
             allowNull: false
         },
@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             allowNull: true
         },
-        mangaTitle: {
+        mangatitle: {
             type: DataTypes.STRING,
             allowNull: false
         },

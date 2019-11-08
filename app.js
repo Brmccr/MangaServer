@@ -7,7 +7,7 @@ let db = require('./db');
 
 app.use(express.json());
 
-db.sequelize.sync();
+db.sequelize.sync({force:true});
 app.use(require('./middleware/headers'));
 
 app.use('/manga', manga)
