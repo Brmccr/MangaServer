@@ -45,7 +45,7 @@ router.post('/reviewberserk', validateSession, function(req, res){
         paragraph: req.body.paragraph,
         owner: req.user.id,
         mangatitle: "Berserk",
-        mangaid: "63868b66-e558-4b65-9221-91932e3da898"
+        mangaid: "7f08fbaf-fc6d-4211-ace4-fc1999b063e9"
     }
 
     console.log(reviewFromRequest)
@@ -62,7 +62,7 @@ router.post('/reviewNGE', validateSession, function(req, res){
         paragraph: req.body.paragraph,
         owner: req.user.id,
         mangatitle: "Neon Genesis Evangelion",
-        mangaid: "01c2bde1-8e7e-4e05-a6e9-e919caad9b6e"
+        mangaid: "cfb15683-197d-43b6-b827-8956d838c103"
     }
 
     console.log(reviewFromRequest)
