@@ -93,7 +93,7 @@ router.post('/reviewNGE', validateSession, function(req, res){
             paragraph: req.body.paragraph,
             owner: req.user.id,
             mangatitle: "Death Note",
-            mangaid: "a81c4c04-ec58-4104-a010-322a5da55331"
+            mangaid: "7b8ba085-6e6b-4e81-b925-2a39bca08e87"
         }
     
         console.log(reviewFromRequest)
@@ -124,7 +124,7 @@ router.post('/reviewNGE', validateSession, function(req, res){
             paragraph: req.body.paragraph,
             owner: req.user.id,
             mangatitle: "Made In Abyss",
-            mangaid: "932a3d74-5c02-4f6a-a5ee-6943cebc3d8a"
+            mangaid: "cfdb3d4d-bfcf-4a84-a556-fd0fbe7e4281"
         }
     
         console.log(reviewFromRequest)
@@ -155,7 +155,7 @@ router.post('/reviewNGE', validateSession, function(req, res){
             paragraph: req.body.paragraph,
             owner: req.user.id,
             mangatitle: "Soul Eater",
-            mangaid: "bcb74e64-c27f-46b2-a988-699999219c91"
+            mangaid: "399ee0dc-952c-4f4f-b931-b14a0af5e237"
         }
     
         console.log(reviewFromRequest)
@@ -186,7 +186,7 @@ router.post('/reviewNGE', validateSession, function(req, res){
             paragraph: req.body.paragraph,
             owner: req.user.id,
             mangatitle: "Deadman Wonderland",
-            mangaid: "53eda246-eff0-4283-9c8e-14c4605aea2e"
+            mangaid: "134f37fa-7ace-4d1b-846d-74c6cf9a1c03"
         }
     
         console.log(reviewFromRequest)
