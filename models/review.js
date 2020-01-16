@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
             defaultValue: DataTypes.UUIDV4,
             allowNull: false
         },
-        mangaid: {
+        manga_id: {
             type: DataTypes.UUID,
             allowNull: false
         },
@@ -29,8 +29,15 @@ module.exports = (sequelize, DataTypes) => {
         owner: {
             type: DataTypes.INTEGER,
             allowNull: false
-        }
-        // Will need to be associated with MangaID on certain view 
-    })
+        },
+        created_at: {
+            type: DataTypes.DATE,
+            allowNull: false
+          },
+          updated_at:  DataTypes.DATE,
+          deleted_at: DataTypes.DATE
+        }, {
+          underscored: true
+        });
     return Review;
 }

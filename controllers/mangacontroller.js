@@ -45,7 +45,7 @@ router.post('/reviewberserk', validateSession, function(req, res){
         paragraph: req.body.paragraph,
         owner: req.user.id,
         mangatitle: "Berserk",
-        mangaid: "7f08fbaf-fc6d-4211-ace4-fc1999b063e9"
+        manga_id: "a0d8ddbd-6bb4-4f82-ac51-7fb48bdbe94f"
     }
 
     console.log(reviewFromRequest)
@@ -62,7 +62,7 @@ router.post('/reviewNGE', validateSession, function(req, res){
         paragraph: req.body.paragraph,
         owner: req.user.id,
         mangatitle: "Neon Genesis Evangelion",
-        mangaid: "cfb15683-197d-43b6-b827-8956d838c103"
+        manga_id: "1f23f7f1-f785-42cf-9f95-ddb7d5f2386c"
     }
 
     console.log(reviewFromRequest)
@@ -93,7 +93,7 @@ router.post('/reviewNGE', validateSession, function(req, res){
             paragraph: req.body.paragraph,
             owner: req.user.id,
             mangatitle: "Death Note",
-            mangaid: "7b8ba085-6e6b-4e81-b925-2a39bca08e87"
+            manga_id: "7b8ba085-6e6b-4e81-b925-2a39bca08e87"
         }
     
         console.log(reviewFromRequest)
@@ -124,7 +124,7 @@ router.post('/reviewNGE', validateSession, function(req, res){
             paragraph: req.body.paragraph,
             owner: req.user.id,
             mangatitle: "Made In Abyss",
-            mangaid: "cfdb3d4d-bfcf-4a84-a556-fd0fbe7e4281"
+            manga_id: "cfdb3d4d-bfcf-4a84-a556-fd0fbe7e4281"
         }
     
         console.log(reviewFromRequest)
@@ -155,7 +155,7 @@ router.post('/reviewNGE', validateSession, function(req, res){
             paragraph: req.body.paragraph,
             owner: req.user.id,
             mangatitle: "Soul Eater",
-            mangaid: "399ee0dc-952c-4f4f-b931-b14a0af5e237"
+            manga_id: "399ee0dc-952c-4f4f-b931-b14a0af5e237"
         }
     
         console.log(reviewFromRequest)
@@ -186,7 +186,7 @@ router.post('/reviewNGE', validateSession, function(req, res){
             paragraph: req.body.paragraph,
             owner: req.user.id,
             mangatitle: "Deadman Wonderland",
-            mangaid: "134f37fa-7ace-4d1b-846d-74c6cf9a1c03"
+            manga_id: "134f37fa-7ace-4d1b-846d-74c6cf9a1c03"
         }
     
         console.log(reviewFromRequest)
@@ -366,7 +366,7 @@ router.post('/review', validateSession, function(req, res){
         rating: req.body.rating,
         paragraph: req.body.paragraph,
         owner: req.user.id,
-        mangaid: req.body.mangaId
+        manga_id: req.body.manga_id
     }
 
     console.log(reviewFromRequest)

@@ -10,6 +10,14 @@ module.exports = function(sequelize, DataTypes) {
         passwordhash: {
             type: DataTypes.STRING,
             allowNull: false,
-        }
+        },
+        created_at: {
+            type: DataTypes.DATE,
+            allowNull: false
+          },
+          updated_at:  DataTypes.DATE,
+          deleted_at: DataTypes.DATE
+        }, {
+          underscored: true
     });
 };
