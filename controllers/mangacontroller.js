@@ -186,7 +186,7 @@ router.post('/reviewNGE', validateSession, function(req, res){
             paragraph: req.body.paragraph,
             owner: req.user.id,
             mangatitle: "Deadman Wonderland",
-            manga_id: "134f37fa-7ace-4d1b-846d-74c6cf9a1c03"
+            manga_id: "7b8a5749-5880-4ca3-9fc2-e05b9f92d099"
         }
     
         console.log(reviewFromRequest)
