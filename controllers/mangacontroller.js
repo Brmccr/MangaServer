@@ -45,7 +45,7 @@ router.post('/reviewberserk', validateSession, function(req, res){
         paragraph: req.body.paragraph,
         owner: req.user.id,
         mangatitle: "Berserk",
-        manga_id: "a0d8ddbd-6bb4-4f82-ac51-7fb48bdbe94f"
+        manga_id: "93397ec8-24c5-4a03-845a-c65dc491f2fa"
     }
 
     console.log(reviewFromRequest)
@@ -62,7 +62,7 @@ router.post('/reviewNGE', validateSession, function(req, res){
         paragraph: req.body.paragraph,
         owner: req.user.id,
         mangatitle: "Neon Genesis Evangelion",
-        manga_id: "1f23f7f1-f785-42cf-9f95-ddb7d5f2386c"
+        manga_id: "883ec093-691a-41dd-acec-9383009159ef"
     }
 
     console.log(reviewFromRequest)
@@ -93,7 +93,7 @@ router.post('/reviewNGE', validateSession, function(req, res){
             paragraph: req.body.paragraph,
             owner: req.user.id,
             mangatitle: "Death Note",
-            manga_id: "7b8ba085-6e6b-4e81-b925-2a39bca08e87"
+            manga_id: "93397ac1-72d2-4cb4-9185-b0923dfa129f"
         }
     
         console.log(reviewFromRequest)
@@ -124,7 +124,7 @@ router.post('/reviewNGE', validateSession, function(req, res){
             paragraph: req.body.paragraph,
             owner: req.user.id,
             mangatitle: "Made In Abyss",
-            manga_id: "cfdb3d4d-bfcf-4a84-a556-fd0fbe7e4281"
+            manga_id: "dfdf6b93-8f67-4ee4-8f10-58a2c7ee5618"
         }
     
         console.log(reviewFromRequest)
@@ -155,7 +155,7 @@ router.post('/reviewNGE', validateSession, function(req, res){
             paragraph: req.body.paragraph,
             owner: req.user.id,
             mangatitle: "Soul Eater",
-            manga_id: "399ee0dc-952c-4f4f-b931-b14a0af5e237"
+            manga_id: "aa175f55-f4e6-436a-9d14-ac0c391ffc26"
         }
     
         console.log(reviewFromRequest)
